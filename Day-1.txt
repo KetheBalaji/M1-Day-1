@@ -1,0 +1,137 @@
+1.	BEGIN
+		PROMPT "Enter the number" AND STORE IN num
+		IF (num MOD 2 == 0) THEN 
+			DISPLAY "Even Number"
+		ELSE
+		DISPLAY "Odd Number”
+		ENDIF
+	END
+
+
+2.	BEGIN
+		DECLARE num AS INTEGER
+		INITIALIZE num TO 0
+		PROMPT “Enter the number” AND STORE IN num
+		IF(num > 0) THEN
+			DISPLAY “Positive Number"
+		ELSE
+		DISPLAY “NegativeNumber”
+		ENDIF
+	END
+
+
+3.     
+
+BEGIN
+DECLARE num AS INTEGER
+PROMPT “Enter a number” AND STORE IN num
+IF ( num== 0 )THEN
+PRINT "The value you entered was zero.“
+ELSE IF ( num< 0 ) THEN
+PRINT  "The value is negative.“
+ELSE
+PRINT  "The value is positive.“ END IF
+END
+
+
+
+4.                              
+
+BEGIN
+DECLARE num, count, sum AS INTEGER
+PROMPT "Enter the value of n" AND STORE IN num
+FOR COUNT = 1 TO num
+sum+=count;
+END FOR
+PRINT "Sum is " + sum
+END
+
+
+
+5.
+
+
+BEGIN 
+ DECLARE numbers[10] AS INTEGER ARRAY 
+ DECLARE max AS INTEGER 
+ INITIALIZE max TO 0 
+ PROMPT “Enter 10 numbers” 
+ FOR index=1 TO 10 
+ ACCEPT numbers[index] 
+ END FOR 
+ max=numbers[0] 
+ FOR index=1 TO 10 
+ IF numbers[index] > max THEN 
+ max=numbers[index] 
+ END IF 
+ END FOR 
+ PRINT max 
+ END 
+
+
+6.
+
+
+RECORD Employee 
+ DECLARE EmpId as INTEGER 
+ DECLARE employmentType AS STRING 
+END RECORD
+
+7.
+
+BEGIN 
+ DECLARE num, num1 AS INTEGER 
+ PROMPT "Enter 2 numbers" AND STORE IN num, num1 
+PRINT "The result is”, num1-num2; 
+END
+
+8.
+
+
+BEGIN 
+ DECLARE emp AS Employee 
+ //leaves variable is used to store number of leaves per month 
+ DECLARE leaves, TotalLeaves AS INTEGER 
+ FOR index= 1 to 5 
+ PROMPT "Enter the EmployeeId" AND STORE IN 
+emp.EmpId 
+ PROMPT "Enter the employmentType" AND STORE IN 
+emp.employmentType 
+END FOR 
+FOR index= 1 to 5 
+ IF(employmentType=='PERMANENT') THEN 
+ leaves=2; 
+ TotalLeaves=leaves*12; 
+ ELSE IF(employmentType=='CONTRACT') THEN 
+ leaves=1; 
+ TotalLeaves=leaves*12; 
+ END IF 
+ PRINT "Employee Id :" , emp.EmpId 
+ PRINT "Total Available Leaves are :", TotalLeaves 
+ END FOR 
+ Index2=5; 
+END
+
+
+9.
+
+
+BEGIN 
+ Print "Enter price of your product" 
+ Accept p 
+ tc=p*.56 
+ Print "Total price of product is": tc 
+END 
+
+
+10.
+
+
+BEGIN 
+ DECLARE num, num1 AS INTEGER 
+ PROMPT "Enter 2 numbers" AND STORE IN num, num1 
+ difference (num,num1); 
+ END 
+ SUB difference (num1, num2) 
+ PRINT "The result is " , num1-num2; 
+ END SUB 
